@@ -1,10 +1,10 @@
 version: "3.3"
 services:
   web:
-    build: ./Tdd_Web_Apps
+    build: ../Tdd_Web_Apps
     command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     volumes:
-      - ./Tdd_Web_Apps:/usr/src/app
+      - ../Tdd_Web_Apps:/usr/src/app
     ports:
       - 8004:8000
     environment:
